@@ -10,7 +10,7 @@ import imageMemeriagourmet from "../assets/memeriagourmet.svg"
 import Story from "./Story"
 
 
-export default function Stories(){
+export default function Stories() {
     let dataStories = [
         {
             title: "9gag",
@@ -25,7 +25,7 @@ export default function Stories(){
             image: imageBarked
         },
         {
-            title: "athanwpylestrangeplanet",
+            title: "nathanwpylestrangeplanet",
             image: imageNathanwpylestrangeplanet
         },
         {
@@ -45,12 +45,17 @@ export default function Stories(){
             image: imageMemeriagourmet
         }
     ]
-    return(
+    return (
         <div class="stories">
             {
                 dataStories.map(story => {
                     return (
-                        <Story image={story.image} title={story.title} key={story.title}/> 
+                        <>
+                            <Story image={story.image} title={story.title} key={story.title} />
+                            <div class="setinha">
+                                <ion-icon name="chevron-forward-circle"></ion-icon>
+                            </div>
+                        </>
                     )
                 })
             }

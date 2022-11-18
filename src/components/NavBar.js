@@ -1,6 +1,6 @@
 import logo from "../assets/logo.png"
 
-export default function Navbar(){
+export default function NavBar(){
 
     return(
     <div class="navbar">

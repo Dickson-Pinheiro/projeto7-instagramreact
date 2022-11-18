@@ -1,11 +1,13 @@
-import Navbar from "./components/Navbar"
-import Stories from "./components/Stories"
+import Corpo from "./components/Corpo"
+import Footer from "./components/Footer"
+import NavBar from "./components/NavBar"
 
 export default function  App() {
     return(
         <>
-            <Navbar/>
-            <Stories/>
+            <NavBar/>
+            <Corpo />
+            <Footer />
         </>
     )
 }
