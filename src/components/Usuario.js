@@ -22,7 +22,7 @@ export default function Usuario({ image, userName, name }) {
         dsta-test = "profile-image"
       />
       <div class="texto" data-test="name">
-        <strong>{userName}</strong>
+        <strong data-test="name">{userName}</strong>
         <span>
           {newUserName ? newUserName : name}
           <ion-icon
