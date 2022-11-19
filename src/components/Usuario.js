@@ -1,14 +1,38 @@
-export default function Usuario({image, userName, name}){
-    return(
-        <div class="usuario">
-          <img src={image} />
-          <div class="texto">
-            <strong>{userName}</strong>
-            <span>
-              {name}
-              <ion-icon name="pencil"></ion-icon>
-            </span>
-          </div>
-        </div>
-    )
+import { useState } from "react"
+
+export default function Usuario({ image, userName, name }) {
+
+  const [newUserName, setNewUserName] = useState("")
+  const [newImageUser, setNewImageUser] = useState("")
+
+
+  function modifyName() {
+    setNewUserName(prompt("Qual o seu nome?"))
+  }
+
+  function modifyImage() {
+    setNewImageUser(prompt("link da imagem para o seu perfil :)"))
+  }
+
+  return (
+    <div class="usuario" data-test="user">
+      <img
+        src={newImageUser ? newImageUser : image}
+        onClick={modifyImage}
+        dsta-test = "profile-image"
+      />
+      <div class="texto" data-test="name">
+        <strong>{userName}</strong>
+        <span>
+          {newUserName ? newUserName : name}
+          <ion-icon
+            onClick={modifyName}
+            name="pencil"
+            data-test = "edit-name"
+            >
+            </ion-icon>
+        </span>
+      </div>
+    </div>
+  )
 }
