@@ -24,7 +24,12 @@ export default function Usuario({ image, userName, name }) {
       <div class="texto">
         <strong >{userName}</strong>
         <span>
-          <span>{newUserName ? newUserName : name}</span>
+          <span 
+          style={{display: "inline-flex"}}
+          data-test = "name"
+          >
+            {newUserName ? newUserName : name}
+            </span>
           <ion-icon
             onClick={modifyName}
             name="pencil"
