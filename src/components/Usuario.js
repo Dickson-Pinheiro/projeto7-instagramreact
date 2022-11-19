@@ -22,9 +22,9 @@ export default function Usuario({ image, userName, name }) {
         data-test = "profile-image"
       />
       <div class="texto">
-        <strong data-test="name">{userName}</strong>
+        <strong >{userName}</strong>
         <span>
-          {newUserName ? newUserName : name}
+          <span>{newUserName ? newUserName : name}</span>
           <ion-icon
             onClick={modifyName}
             name="pencil"
