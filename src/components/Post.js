@@ -68,7 +68,9 @@ export default function Post({ userImage, userName, image, lastLikeName, lastLik
         </div>
 
         <div class="curtidas">
-          <img src={lastLikeImage} />
+          <img 
+          src={lastLikeImage}
+          />
           <div class="texto">
             Curtido por <strong>{lastLikeName}</strong> e <strong data-test = "likes-number">outras <span>{totalLikes ? totalLikes : quantityLike}</span> pessoas</strong>
           </div>
