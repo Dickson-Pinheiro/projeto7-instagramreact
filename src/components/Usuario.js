@@ -19,9 +19,9 @@ export default function Usuario({ image, userName, name }) {
       <img
         src={newImageUser ? newImageUser : image}
         onClick={modifyImage}
-        dsta-test = "profile-image"
+        data-test = "profile-image"
       />
-      <div class="texto" data-test="name">
+      <div class="texto">
         <strong data-test="name">{userName}</strong>
         <span>
           {newUserName ? newUserName : name}

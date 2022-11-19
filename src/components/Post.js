@@ -50,7 +50,6 @@ export default function Post({ userImage, userName, image, lastLikeName, lastLik
               name={liked ? "heart" : "heart-outline"}
               style={{ color: liked ? "red" : "black" }}
               onClick = {likeButton}
-              data-test = "like-post"
               >
             </ion-icon>
 
@@ -70,7 +69,7 @@ export default function Post({ userImage, userName, image, lastLikeName, lastLik
         <div class="curtidas">
           <img src={lastLikeImage} />
           <div class="texto">
-            Curtido por <strong>{lastLikeName}</strong> e <strong>outras {totalLikes ? totalLikes : quantityLike} pessoas</strong>
+            Curtido por <strong>{lastLikeName}</strong> e <strong data-test = "like-post">outras <span>{totalLikes ? totalLikes : quantityLike}</span> pessoas</strong>
           </div>
         </div>
       </div>
